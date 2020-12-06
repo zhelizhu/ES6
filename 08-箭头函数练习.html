@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+    <script>
+        let div = document.querySelector('div')
+
+        let timer = null
+
+        div.onclick = function () {
+
+            // 第一种方案
+
+            let that = this
+
+            timer = setTimeout(function () {
+
+                that.style.background = '#58a'
+
+            }, 2000)
+        }
+
+        div.onclick = function () {
+
+            // 第二种方案
+
+            timer = setTimeout(()=> {
+
+                this.style.background = '#58a'
+
+            }, 2000)
+
+        }
+
+
+        let arr = [1, 6, 9, 10, 100, 25]
+
+        console.log(arr);
+
+        // let result=arr.filter(function(item){
+        //     if(item%2===0){
+        //         return true
+        //     }
+        //     else{
+        //         return false
+        //     }
+        // })
+
+        let result = arr.filter(item => item % 2 === 0)
+
+        console.log(result);
+
+        // 适合this无关的回调，定时器，数组方法回调
+
+        // 不适合和this有关的回调事件回调，对象方法
+
+    </script>
+</body>
+
+</html>

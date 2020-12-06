@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成器实例2</title>
+</head>
+
+<body>
+    <script>
+        function getUsers() {
+            setTimeout(function () {
+                let data = 'users'
+                iterator.next(data)
+            }, 1000)
+        }
+
+        function getOrders() {
+            setTimeout(function () {
+                let data = 'orders'
+                iterator.next(data)
+            }, 1000)
+        }
+
+        function getGoods() {
+            setTimeout(function () {
+                let data = 'goods'
+                iterator.next(data)
+            }, 1000)
+        }
+
+        function* gen() {
+            let user = yield getUsers()
+            console.log(user);
+
+            let orders = yield getOrders()
+            console.log(orders);
+
+            let goods = yield getGoods()
+            console.log(goods);
+        }
+
+        let iterator = gen()
+
+        iterator.next()
+    </script>
+</body>
+
+</html>

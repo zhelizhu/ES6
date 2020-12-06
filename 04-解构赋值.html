@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解构赋值</title>
+</head>
+<body>
+    
+    <script>
+        // 数组使用较少
+        const F4=[1,2,3]
+
+        let[a,b,c]=F4
+
+        console.log(a,b,c);
+
+        // 方法解构使用较多
+
+        const zhao={
+            name:"z",
+            age:18,
+            x:function(){
+                console.log('x');
+            }
+        }
+
+        let {name,age,x}=zhao
+
+        console.log(name,age,x);
+
+        // 传统
+        zhao.x()
+
+        // 优秀
+        x()
+    </script>
+
+</body>
+</html>

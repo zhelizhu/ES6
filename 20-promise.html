@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <script>
+        // 实例化promise
+
+        // 初始化
+
+        const promise=new Promise(function(res,rej){
+
+            setTimeout(()=>{
+
+                // let data='数据库中数据'
+                // // 成功
+                // res(data)
+
+                let data='数据读取失败'
+                // 失败
+                rej(data)
+
+            },1000)
+
+        })
+        // 调用then()方法
+
+        promise.then(function(value){
+
+            // 成功调用
+            console.log(value);
+
+        },function(reason){
+
+            // 失败调用
+            console.log(reason);
+
+        })
+    </script>
+</body>
+</html>

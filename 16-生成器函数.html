@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成器</title>
+</head>
+
+<body>
+    <script>
+        function* gen() {
+            console.log('hello');
+
+            // yield代码分隔符
+
+
+            yield 'nice';
+
+            yield 'good';
+            
+            yield 'well';
+        }
+
+        let iterator = gen() //迭代器对象
+
+        console.log(iterator);
+
+        console.log(iterator.next());
+
+        console.log(iterator.next());
+
+        console.log(iterator.next());
+
+
+        // for(let v of gen()){
+        //     console.log(v);
+        // }
+    </script>
+</body>
+
+</html>

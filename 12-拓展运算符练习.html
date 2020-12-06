@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拓展运算符</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+
+        // 把数组分解成一个一个的参数
+
+        const k=[1,2]
+        const f=[4,5]
+
+        // 以前
+
+        const yq=k.concat(f)
+        console.log(yq);
+        // 数组拼接
+
+        const kf=[...k,...f]
+        console.log(kf);
+
+
+
+        // 数组拷贝（浅拷贝）
+        const san=['e','g','m']
+
+        const ye=[...san]
+
+        console.log(ye);
+
+        // 将伪数组转真数组
+
+        var divs=document.querySelectorAll('div')
+
+        console.log(divs);
+
+        console.log([...divs]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+<body>
+
+    <script>
+        // this是声明时指向的this
+
+        // 以前是谁调用指向谁
+
+        let fn=(a,b)=>{
+
+            console.log(this);
+
+            return a+b
+        }
+
+        let res=fn(1,2)
+
+        console.log(res);
+
+        window.name='123'
+
+        function getName(){
+            console.log(this.name);
+        }
+
+        let getName2=()=>{
+            console.log(this.name);
+        }
+
+        const school={
+            name:'name'
+        }
+
+        // 123
+
+        // getName()
+        // getName2()
+
+        getName.call(school)
+
+        // call也不能改变箭头函数的this(静态)
+
+        getName2.call(school)
+
+        // 不能作为构造函数实例化对象
+
+        // Uncaught TypeError: person is not a constructor
+
+        // let person=(name,age)=>{
+        //     this.name=name
+        //     this.age=age
+        // }
+        // let me=new person()
+
+        // 没有定义arguenmts
+
+
+        // 简写
+
+        // （1）省略小括号：只有一个参数
+
+        let add=n=>{
+            console.log(n);
+        }
+        add(9)
+
+        // (2) 代码只有一句话{}省略
+
+        let num=n=>n;
+        
+        num('代码只有一句话')
+
+        // return也省略
+
+        let numres = num('代码只有一句话')
+
+        console.log(numres);
+    </script>
+</body>
+</html>

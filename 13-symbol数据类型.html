@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>symbol</title>
+</head>
+
+<body>
+    <script>
+        // 原始数据类型
+
+        // 表示独一无二的值时js的第七种数据类型，类型字符串
+
+        // 解决命名冲突
+
+        // 不能进行数据运算
+
+        // 不能用for in遍历 Reflect.onkey
+
+
+        // 创建Symbol
+
+        let sy = Symbol()
+
+        console.log(sy, typeof sy);
+
+
+        let sr = Symbol('描述字符串（注释）')
+
+        console.log(sr, typeof sr);
+
+        // 不一样
+
+        let sr1 = Symbol('描述字符串（注释）')
+
+        console.log(sr == sr1);
+
+        let s4 = Symbol.for('123')
+
+        let s5 = Symbol.for('123')
+
+        console.log(s4, typeof s4);
+
+        console.log(s4 === s5);
+
+
+        // 不能数据运算(对比)
+
+
+        // 基本数据类型usonb
+
+        // undefined
+
+        // String
+
+        // Object
+
+        // null
+
+        // Number
+
+        // Boolean
+
+
+        // 作用 向对象添加方法
+
+        let game = {
+            up: function () {
+                console.log('up');
+            },
+            dowm: function () {
+                console.log('down');
+            }
+        }
+
+
+        let methods = {
+            up: Symbol('up'),
+            down: Symbol('down')
+        }
+
+        game[methods.up] = function () {
+            console.log('up');
+        }
+
+        game[methods.down] = function () {
+            console.log('down');
+        }
+
+        console.log(game);
+
+        game[methods.up]()
+
+
+        let mysymbol = Symbol();
+        let mysymbol2 = Symbol();
+        let youxi = {
+            name: '狼人杀',
+            a: '今天天气不错',
+            [mysymbol]: function (a) {
+                console.log('我可以说话')
+            },
+            [mysymbol2]: function () {
+                console.log('我可以自爆')
+            }
+        }
+        youxi[mysymbol]()
+    </script>
+</body>
+
+</html>

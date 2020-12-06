@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量声明</title>
+</head>
+<body>
+    <script>
+
+        let a;
+
+        let b,c,d;
+
+        let e=100;
+
+        let f=520,g='love',h=[]
+
+        // let声明变量名不能重复
+
+        // let a=10
+
+        // let声明变量名不能重复
+        {   
+            // 块级作用域
+            // 报错
+            // let girl='123'
+            
+            // 正常
+            // var girl='123'
+        }
+        // console.log(girl);
+
+        // 不存在变量提升
+
+        // console.log(name);
+
+        // let name='123'
+
+        // 不影响作用域链
+        {
+            let school='123'
+
+            function fn(){
+                console.log(school);
+            }
+
+            // 正常输出
+
+            fn()
+        }
+    </script>
+</body>
+</html>

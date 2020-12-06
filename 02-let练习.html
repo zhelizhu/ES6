@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let练习</title>
+    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
+    <style>
+        .item{
+            float: left;
+            width: 200px;
+            height: 150px;
+            border: 2px solid black;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>点击切换颜色</h1>
+
+    <div></div>
+    <div></div>
+    <div></div> -->
+
+    <div class="container">
+
+        <h2 class="page-header">
+            点击切换颜色
+        </h2>
+
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+    </div>
+
+    <script>
+
+        let divs = document.querySelectorAll('.item')
+
+        for (let i = 0; i < divs.length; i++) {
+
+            const element = divs[i];
+
+            element.onclick=function(){
+
+                element.style.background='red'
+
+            }
+        }
+    </script>
+</body>
+</html>

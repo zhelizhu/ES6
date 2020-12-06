@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        // 对象
+
+        let map=new Map()
+
+        // 添加元素
+
+        map.set('name','123')
+
+
+
+        map.set('change',()=>{
+            console.log('change');
+        })
+
+        let key={
+            school:'zzz'
+        }
+
+        // 对象也可以是键名
+        map.set(key,[4,5,6])
+
+        console.log(map.size);
+
+        // 删除
+        map.delete(key)
+
+        console.log(map);
+
+        // 获取
+
+        console.log(map.get('name'));
+
+
+        //清空
+
+        // map.clear()
+
+
+        for(value of map){
+            console.log(value);
+        }
+    </script>
+</body>
+</html>

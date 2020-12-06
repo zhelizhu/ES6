@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set集合</title>
+</head>
+<body>
+    <!-- 本质是一个对象 -->
+    <script>
+
+        let set=new Set()
+
+        // object
+        console.log(typeof set);
+
+        // 传入可迭代数据
+        let set1=new Set([1,2,3,4,1])
+
+        // 自动去重
+        console.log(set1);
+
+        // 属性方法
+
+        // 长度
+        console.log(set1.size);
+
+        // 添加
+        set1.add(5)
+
+        console.log(set1);
+
+        // 删除
+        set1.delete(5)
+
+        console.log(set1);
+
+        // 检测
+
+        // Boolean
+        console.log(set1.has('2'));
+
+        // 清空
+
+        // set1.clear()
+
+        // console.log(set1);
+
+        for(let value of set1){
+            console.log(value);
+        }
+
+    </script>
+</body>
+</html>

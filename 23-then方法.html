@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>then</title>
+</head>
+
+<body>
+    <script>
+        const promise = new Promise((res, rej) => {
+
+            setTimeout(function () {
+
+                res('用户数据')
+
+            }, 1000)
+
+        }).then(function (value) {
+
+            // console.log(value);
+
+            // then方法的返回结果是promise对象 对象状态由回调函数的执行结果决定
+
+            // 如果回调函数中的返回结果是非promise类型的属性，状态为成功
+
+            // return 123
+
+            // 如果回调函数中的返回结果是promise类型的属性，状态为promise的res或者rej
+
+            // return new Promise((res,rej)=>{
+            //     res('ok')
+            //     // rej('err')
+            // })
+
+            // 如果是抛出错误也是rej
+            throw new Error('error')
+
+        }, function (reason) {
+
+            console.warn('失败');
+
+        }).then(function (value) {
+
+            console.log('第二个then成功');
+
+        },function(reason){
+
+            console.log('第二个then失败');
+
+        })
+        // 链式调用
+
+    </script>
+</body>
+
+</html>

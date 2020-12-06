@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参数初始值</title>
+</head>
+<body>
+    <script>
+
+        // 允许给形参设置初始值
+
+        // 一般放最后
+
+      
+
+        function add(a,b,c=10){
+            return a+b+c
+        }
+
+        console.log(add(1,2));
+
+        // 与结构赋值结合
+        
+        function connect({host,user,pass,post='3306'}){
+
+            console.log(host);
+
+            console.log(user);
+
+            console.log(pass);
+
+            console.log(post);
+
+        }
+
+        connect({
+            host:'loca',
+            user:'root',
+            pass:'pass',
+            post:'127'
+        })
+
+        
+    </script>
+</body>
+</html>

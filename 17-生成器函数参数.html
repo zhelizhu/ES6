@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成器函数参数</title>
+</head>
+<body>
+    <script>
+        function * gen(arg){
+
+            console.log(arg);
+
+            let one=yield '1'
+
+            console.log(one);
+           
+            let two= yield '2'
+
+            console.log(two);
+
+            let three=yield '3'
+            
+            console.log(three);
+        }
+
+        let iterator= gen('aaa')
+
+        console.log(iterator);
+
+        iterator.next();
+
+        iterator.next('bbb');
+
+        iterator.next('ccc');
+    
+        iterator.next('ddd');
+    </script>
+</body>
+</html>  

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of</title>
+</head>
+
+<body>
+    <script>
+
+        var arr = [1, 2, 3, 4]
+
+        var obj = {
+            name: '12',
+            age: 23
+        }
+
+        for (let v of arr) {
+            console.log(v);
+        }
+
+        // for(item in obj){
+        //     console.log(obj[item]);
+        // }
+
+        // obj is not iterable
+        // for (item of obj) {
+        //     console.log(item);
+        // }
+
+        let iterator=arr[Symbol.iterator]()
+
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+    </script>
+</body>
+
+</html>
