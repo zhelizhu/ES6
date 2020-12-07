@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>let练习</title>
-    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <style>
         .item{
             float: left;
@@ -40,11 +39,9 @@
 
         for (let i = 0; i < divs.length; i++) {
 
-            const element = divs[i];
+            divs[i].onclick=function(){
 
-            element.onclick=function(){
-
-                element.style.background='red'
+                divs[i].style.background='red'
 
             }
         }

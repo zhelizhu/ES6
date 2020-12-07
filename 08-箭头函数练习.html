@@ -29,7 +29,7 @@
 
             let that = this
 
-            timer = setTimeout(function () {
+            timer = window.setTimeout(function () {
 
                 that.style.background = '#58a'
 
@@ -40,7 +40,9 @@
 
             // 第二种方案
 
-            timer = setTimeout(()=> {
+            // setTimeout中的回调函数在div的onclick中定义this指向div
+
+            timer = window.setTimeout(()=> {
 
                 this.style.background = '#58a'
 
@@ -53,14 +55,14 @@
 
         console.log(arr);
 
-        // let result=arr.filter(function(item){
-        //     if(item%2===0){
-        //         return true
-        //     }
-        //     else{
-        //         return false
-        //     }
-        // })
+        let result=arr.filter(function(item){
+            if(item%2===0){
+                return true
+            }
+            else{
+                return false
+            }
+        })
 
         let result = arr.filter(item => item % 2 === 0)
 
