@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象拓展</title>
+</head>
+<body>
+    <script>
+        console.log(Object.is(1200,1200));//===
+
+        // false
+        console.log(NaN===NaN);
+
+        // true
+        console.log(Object.is(NaN,NaN));
+
+        // 合并对象
+
+        let config1={
+            host:'localhost',
+            port:3306,
+            name:'root',
+            pass:'root',
+            text:'123'
+        }
+
+        let config2={
+            host:'local',
+            port:33060,
+            name:'com',
+            pass:'love'
+        }
+
+        console.log(Object.assign(config1,config2));
+
+        // 设置原型对象
+
+        // Object.setPrototypeOf
+
+        let school={
+            name:'zzz'
+        }
+        let cit={
+            xiao:[1,2,3]
+        }
+
+        Object.setPrototypeOf(school,cit)
+
+        console.log(school);
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get_set</title>
+</head>
+<body>
+    <script>
+        class Phone{
+
+            get price(){
+
+                console.log('读取价格');
+
+                return 'price'
+            }
+
+            set price(newVal){
+
+                console.log('设置价格');
+                
+            }
+        }
+
+        let phone=new Phone()
+
+        console.log(phone.price);
+
+        phone.price='1500'
+
+    </script>
+</body>
+</html>

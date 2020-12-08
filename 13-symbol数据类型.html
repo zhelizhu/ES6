@@ -98,11 +98,10 @@
         let mysymbol2 = Symbol();
         let youxi = {
             name: '狼人杀',
-            a: '今天天气不错',
-            [mysymbol]: function (a) {
+            [mysymbol]() {
                 console.log('我可以说话')
             },
-            [mysymbol2]: function () {
+            [mysymbol2]() {
                 console.log('我可以自爆')
             }
         }

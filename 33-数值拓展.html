@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数值拓展</title>
+</head>
+<body>
+    <script>
+        // js的最小精度
+        // Number.EPSILON
+
+        console.log(0.1+0.2);
+
+        function equal(a,b){
+            if(Math.abs(a-b<Number.EPSILON)){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+
+        console.log(equal(0.1+0.2,0.3));
+
+        // 二进制
+        let b=0b1010
+        // 八进制
+        let o=0o777
+        // 十
+        let d=100
+        // 16
+        let x=0xff
+        
+
+        // 判断是否有限
+
+        console.log(Number.isFinite(100));
+        console.log(Number.isFinite(Infinity));
+
+
+        // 判断是不是NaN
+
+        console.log(Number.isNaN(123));
+        console.log(Number.isNaN('l'));
+
+        // 取整
+
+        console.log(Number.parseInt(1.52));
+        console.log(Number.parseFloat(1.52));
+
+        // 判断是不是整数
+
+        console.log(Number.isInteger(1.85));
+        console.log(Number.isInteger(100));
+
+        // 去除小数部分
+
+        console.log(Math.trunc(3.5));
+
+
+        // 判断正负或者0
+
+        console.log(Math.sign(100));//1
+        console.log(Math.sign(-100));//-1
+        console.log(Math.sign(0));//0
+
+
+    </script>
+</body>
+</html>

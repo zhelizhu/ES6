@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        // es5
+
+        // function Phone(brand,price){
+        //     this.brand=brand
+        //     this.price=price
+        // }
+
+        // // 原型对象添加方法
+
+        // Phone.prototype.call=function(){
+        //     console.log('call');
+        // }
+
+        // let phone=new Phone('小米',3000)
+        
+        // console.log(phone);
+
+        // phone.call()
+
+        // es6 class
+
+        class Phone{
+            // new时执行
+            constructor(brand,pirce){
+                this.brand=brand
+                this.pirce=pirce
+            }
+
+            call(){
+                console.log('call');
+            }
+
+        }
+
+        let phone=new Phone('苹果',1000)
+
+        console.log(phone);
+
+        phone.call()
+
+    </script>
+</body>
+</html>

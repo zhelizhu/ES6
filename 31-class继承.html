@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 继承</title>
+</head>
+
+<body>
+    <script>
+        // function Phone(brand, price) {
+        //     this.brand = brand
+        //     this.price = price
+        // }
+
+        // // 原型对象添加方法
+
+        // Phone.prototype.call = function () {
+        //     console.log('call');
+        // }
+
+        // let phone = new Phone('小米', 3000)
+
+        // console.log(phone);
+
+        // phone.call()
+
+
+        // function Smart(brand, price, color, size) {
+
+        //     Phone.call(this, brand, price)
+
+        //     this.color = color
+
+        //     this.size = size
+
+        // }
+
+        // // 设置子集构造函数原型
+
+        // Smart.prototype = new Phone
+
+        // // 声明子类方法
+
+        // Smart.prototype.photo = function () {
+        //     console.log('phone');
+        // }
+
+        // Smart.prototype.play = function () {
+        //     console.log('play');
+        // }
+
+
+        // let chuizi = new Smart('锤子', 2499, '黑色', 5.5)
+
+        // console.log(chuizi);
+
+        // es6 class继承
+
+        class Phone {
+            constructor(brand, price) {
+                this.brand = brand
+                this.price = price
+            }
+
+            call() {
+                console.log('call')
+            }
+        }
+
+        class Smart extends Phone {
+
+            constructor(brand, price, color, size) {
+
+                super(brand,price)
+
+                this.color = color
+
+                this.size = size
+
+            }
+
+            photo(){
+                console.log('photo')
+            }
+            play(){
+                console.log('play')
+            }
+            call(){
+                console.log('重写的call')
+            }
+        }
+
+        let xiaomi=new Smart('小米',3000,'red',5.5)
+
+        console.log(xiaomi);
+
+        xiaomi.call()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>静态成员</title>
+</head>
+<body>
+    <script>
+        // function Phone(){
+            
+        // }
+
+        // Phone.name='手机'
+
+        // Phone.change=function(){
+        //     console.log('change');
+        // }
+
+        // Phone.prototype.size='5.5'
+
+        // let nky=new Phone()
+
+        // // undefined
+        // console.log(nky.name);
+        // // 5.5(原型对象上可以使用)
+        // console.log(nky.size);
+
+        // // Phone
+        // console.log(Phone.name);
+
+
+
+        class Phone{
+            // 静态属性
+            static name='手机'
+            // 静态方法
+            static change(){
+                console.log('change');
+            }
+        }
+
+        let phone=new Phone()
+        // 手机
+        console.log(Phone.name);
+        // undefined
+        console.log(phone.name);
+    </script>
+</body>
+</html>
