@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async await</title>
+</head>
+
+<body>
+    <script>
+        // async函数 返回结果是promise对象
+
+        const promise = new Promise((res, rej) => {
+            // res('成功')
+            rej('失败')
+        })
+
+        async function fn() {
+            // return 'promise'
+
+            // throw new Error('err')
+
+            // return new Promise(function(res,rej){
+            //     res('成功')
+            // })
+
+            // await必须放在async里
+
+            // await后面的值就是promise返回的值
+
+            try {
+                
+                let result = await promise
+
+                console.log(result);
+
+            }catch(e){
+
+                console.log(e);
+            }
+
+        }
+
+        // 返回的结果不是promise对象
+        // 返回结果就是成功的prmise(undefined)
+        // fn().then(function (value) {
+        //     console.log('成功');
+        // })
+        console.log(fn());
+    </script>
+</body>
+
+</html>

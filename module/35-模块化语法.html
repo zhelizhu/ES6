@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模块化语法</title>
+</head>
+<body>
+    <script type="module">
+
+        // import * as m1 from "./m1.js"
+
+        // console.log(m1);
+
+        // m1.default.change()
+
+        // import {school,teach} from './m1.js'
+
+        // 重名时
+        // import {school as guigu ,teach} from './m1.js'
+
+        // import {default as m3} from './m1.js'
+
+        // console.log(m3);
+
+        // import m3 from './m1.js'
+
+        // console.log(m3);
+    </script>
+    <script src="./app.js" type="module"></script>
+
+    <!-- npx babel-cli babel-preset-env browserify(webpack) -->
+
+    <!-- npx babel src/js -d dist/js -->
+
+    <!-- 打包 npx browserify dist/js/app.js -o dist/bundle.js -->
+</body>
+</html>
