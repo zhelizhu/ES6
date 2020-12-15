@@ -59,6 +59,11 @@
 
             // 第二种方案
 
+<<<<<<< HEAD
+=======
+            // setTimeout中的回调函数在div的onclick中定义this指向div
+
+>>>>>>> d800114f64da28e101635517a6b7a0f4c7d9ef98
             timer = window.setTimeout(()=> {
 
                 this.style.background = '#58a'
@@ -72,14 +77,14 @@
 
         console.log(arr);
 
-        // let result=arr.filter(function(item){
-        //     if(item%2===0){
-        //         return true
-        //     }
-        //     else{
-        //         return false
-        //     }
-        // })
+        let result=arr.filter(function(item){
+            if(item%2===0){
+                return true
+            }
+            else{
+                return false
+            }
+        })
 
         let result = arr.filter(item => item % 2 === 0)
 

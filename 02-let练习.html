@@ -41,11 +41,9 @@
 
         for (let i = 0; i < divs.length; i++) {
 
-            const element = divs[i];
+            divs[i].onclick=function(){
 
-            element.onclick=function(){
-
-                element.style.background='red'
+                divs[i].style.background='red'
 
                 body.style.background='rgba(0,0,0,'+(i+1)/10+')'
 
