@@ -15,8 +15,6 @@
 
         map.set('name','123')
 
-
-
         map.set('change',()=>{
             console.log('change');
         })
@@ -27,23 +25,17 @@
 
         // 对象也可以是键名
         map.set(key,[4,5,6])
-
         console.log(map.size);
 
         // 删除
         map.delete(key)
-
         console.log(map);
 
         // 获取
-
         console.log(map.get('name'));
 
-
         //清空
-
         // map.clear()
-
 
         for(value of map){
             console.log(value);

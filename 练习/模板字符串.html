@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json</title>
+    <style>
+        table{
+            width: 600px;
+            height: 50px;
+            text-align: center;
+            border: 0.5px solid #ccc;
+        }
+        table td{
+            border: 0.5px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing='0'>
+        <tr>
+
+        </tr>
+    </table>
+    <script>
+        var json = {
+            "data": [{
+                    id: 1,
+                    name: 'trump',
+                    age: 18
+                },
+                {
+                    id: 2,
+                    name: 'zs',
+                    age: 12
+                },
+                {
+                    id: 3,
+                    name: 'ls',
+                    age: 15
+                },
+                {
+                    id: 4,
+                    name: 'ww',
+                    age: 17
+                },
+                {
+                    id: 5,
+                    name: 'zl',
+                    age: 18
+                },
+                {
+                    id: 6,
+                    name: 'zz',
+                    age: 18
+                }
+            ]
+        }
+
+        var data = json.data
+
+        console.log(data);
+
+        var str = `<tr>
+            <th>id</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>`
+        data.forEach(function (value, index) {
+
+            str += `<tr><td>${value.id}</td>
+            <td>${value.name}</td>
+            <td>${value.age}</td></tr>`
+
+            document.querySelector('table').innerHTML=str
+        })
+    </script>
+</body>
+
+</html>

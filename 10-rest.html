@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rest</title>
 </head>
+
 <body>
     <script>
-
-        function data(){
-        // 对象
+        function data() {
+            // 对象
             console.log(arguments);
         }
 
-        data(10,20)
+        data(10, 20)
 
-        
-        function data(...args){
+
+        function data(...args) {
             // 数组
             console.log(args);
         }
-        data(10,20)
+        data(10, 20)
 
 
         // ...args必须放最后
-        function data(a,b,...args){
+        function data(a, b, ...args) {
             // 数组
             console.log(a);
             console.log(b);
             console.log(args);
         }
-        
-        data(10,20,3,4,5)
 
+        data(10, 20, 3, 4, 5)
     </script>
 </body>
+
 </html>

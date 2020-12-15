@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 500px;
+    height: 325px;
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    .show{
+        height: 300px;
+    }
+    button{
+        width: 100%;
+    }
+}

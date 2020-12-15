@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打字效果</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .show{
+            animation: shan 0.6s infinite 0s;
+        }
+        @keyframes shan {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="show">
+
+        </div>
+        <button>开始</button>
+    </div>
+
+    <script>
+        let str =
+            `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse sapiente ducimus illo voluptates officia tempora, totam sint cumque, minus molestiae accusantium explicabo corrupti maiores vero eius porro sequi, doloremque iure.`
+
+        let arr = str.split('')
+
+        let btn = document.querySelector('button')
+
+        let show = document.querySelector('.show')
+
+        btn.onclick = function () {
+
+            for (let i = 0; i < arr.length; i++) {
+
+                timer = setTimeout(function () {
+
+                    show.append(arr[i])
+
+                }, i * 100)
+
+            }
+            
+            this.disabled=true
+        }
+    </script>
+</body>
+
+</html>

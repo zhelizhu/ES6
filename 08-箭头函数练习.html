@@ -19,6 +19,25 @@
 
     </div>
     <script>
+
+        var obj={
+
+            // 箭头函数内部没有this
+            run:()=>{
+                console.log(this);
+            },
+            run2:function(){
+                console.log(this);
+            }
+        }
+
+        // window
+        obj.run()
+        // obj
+        obj.run2()
+
+
+
         let div = document.querySelector('div')
 
         let timer = null
@@ -29,7 +48,7 @@
 
             let that = this
 
-            timer = setTimeout(function () {
+            timer = window.setTimeout(function () {
 
                 that.style.background = '#58a'
 
@@ -40,7 +59,7 @@
 
             // 第二种方案
 
-            timer = setTimeout(()=> {
+            timer = window.setTimeout(()=> {
 
                 this.style.background = '#58a'
 

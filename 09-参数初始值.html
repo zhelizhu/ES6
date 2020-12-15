@@ -12,13 +12,19 @@
 
         // 一般放最后
 
-      
-
-        function add(a,b,c=10){
+        function add(a,b,d,c=10){
             return a+b+c
         }
 
-        console.log(add(1,2));
+        // 参数无默认值 则为 undefined
+
+        // 传入参数为undefined则为默认值
+
+        // 形参作用域在函数内部
+
+        console.log(add(1,2,15));
+
+        console.log(add.length);
 
         // 与结构赋值结合
         
@@ -33,6 +39,9 @@
             console.log(post);
 
         }
+
+        // 1
+        console.log(connect.length);
 
         connect({
             host:'loca',

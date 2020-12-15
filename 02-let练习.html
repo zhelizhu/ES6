@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>let练习</title>
-    <link rel="stylesheet" href="./bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <style>
         .item{
             float: left;
@@ -38,6 +37,8 @@
 
         let divs = document.querySelectorAll('.item')
 
+        let body = document.querySelector('body')
+
         for (let i = 0; i < divs.length; i++) {
 
             const element = divs[i];
@@ -46,8 +47,41 @@
 
                 element.style.background='red'
 
+                body.style.background='rgba(0,0,0,'+(i+1)/10+')'
+
             }
         }
+        // var 不支持块级作用域
+        {
+            // 大括号包起来的都是块级作用域
+            // 函数也是块级作用域
+        }
+
+        function hi(){
+            // 函数作用域
+            // 块级作用域 
+
+            // 局部变量
+            var age=20
+            // 局部变量
+            let names='块级'
+        }
+
+        // 5个5
+        var i
+        for(i=0;i<5;i++){
+            let j=i
+            setTimeout(function(){
+                console.log(i,j);
+            })
+        }
+        // 0 1 2 3 4
+        for(let i=0;i<5;i++){
+            setTimeout(function(){
+                console.log(i);
+            })
+        }
+
     </script>
 </body>
 </html>
