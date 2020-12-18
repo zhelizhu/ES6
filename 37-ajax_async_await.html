@@ -48,13 +48,22 @@
 
     async function main() {
 
+        // await 后面函数等待
+
         let result = await sendAjax('https://api.apiopen.top/getJoke')
 
         console.log(result);
 
     }
 
-    main()
+    try{
+        main()
+    }
+    catch{
+        console.log('err');
+    }
+
+    
 </script>
 </body>
 
